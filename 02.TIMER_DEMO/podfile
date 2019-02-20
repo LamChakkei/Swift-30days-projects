@@ -1,0 +1,7 @@
+platform :ios,'9.0'
+use_frameworks!
+
+target '02.TIMER_DEMO' do
+pod 'SnapKit'
+end
+
