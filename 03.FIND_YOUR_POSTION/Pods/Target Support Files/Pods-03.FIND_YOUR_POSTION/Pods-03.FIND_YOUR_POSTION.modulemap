@@ -1,0 +1,6 @@
+module Pods_03_FIND_YOUR_POSTION {
+  umbrella header "Pods-03.FIND_YOUR_POSTION-umbrella.h"
+
+  export *
+  module * { export * }
+}
