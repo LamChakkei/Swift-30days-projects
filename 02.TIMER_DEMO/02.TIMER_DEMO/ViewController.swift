@@ -14,7 +14,7 @@ let kScreenWidth = UIScreen.main.bounds.width
 
 class ViewController: UIViewController {
     private var timer:Timer!
-    private var para:CGFloat!
+    private var para:Double!
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(startButton)
@@ -41,7 +41,6 @@ class ViewController: UIViewController {
         titleLabel.snp.makeConstraints { (ConstraintMaker) in
             ConstraintMaker.centerX.equalTo(view)
             ConstraintMaker.top.equalTo(view).offset(80)
-            ConstraintMaker.width.height.equalTo(50)
         }
     }
     func currentHeight(height:CGFloat) -> CGFloat {
@@ -53,17 +52,14 @@ class ViewController: UIViewController {
     
     //MARK:Set Timer
     @objc func setTimer() -> Void {
-        para = 0.00
+        para = 0.0
         timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { (Timer) in
             self.para = self.para + 0.1
-            self.titleLabel.text = String.init(format: "%.2f", self.para)
+            self.titleLabel.text = String.init(format: "%.1f", self.para)
         })
     }
     @objc func cancelTimer() -> Void {
         timer.invalidate()
-        para = 0.00
-        self.titleLabel.text = String.init(format: "%.2f", self.para)
-        
     }
     
     //MARK:Lazy Load
