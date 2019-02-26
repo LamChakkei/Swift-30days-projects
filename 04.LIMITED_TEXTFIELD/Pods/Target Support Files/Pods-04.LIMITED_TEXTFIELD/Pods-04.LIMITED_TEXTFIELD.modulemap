@@ -1,0 +1,6 @@
+module Pods_04_LIMITED_TEXTFIELD {
+  umbrella header "Pods-04.LIMITED_TEXTFIELD-umbrella.h"
+
+  export *
+  module * { export * }
+}
